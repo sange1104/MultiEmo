@@ -52,7 +52,12 @@ python ./data/preprocessing.py --GoEmotion.csv
 
 Model
 -------------
-Here is the architecture of MultiEmo.
+Here is the architecture of MultiEmo. 
+
+
+<img src="https://user-images.githubusercontent.com/63252403/148645955-0ac18bdb-328e-4543-9578-affb2b396743.jpg" width="700" height="400"/>
+
+
 
 For MultiEmo, you can train model by following script.
 ```
