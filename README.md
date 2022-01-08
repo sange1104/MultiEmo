@@ -55,7 +55,7 @@ Model
 Here is the architecture of MultiEmo. 
 
 
-<img src="https://user-images.githubusercontent.com/63252403/148645955-0ac18bdb-328e-4543-9578-affb2b396743.jpg" width="700" height="400"/>
+<img src="https://user-images.githubusercontent.com/63252403/148646373-28f826ff-ed44-4129-963c-3f08a93ca686.JPG" width="700" height="400"/> 
 
 
 
