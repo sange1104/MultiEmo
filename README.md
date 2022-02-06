@@ -29,8 +29,13 @@ Data Format
 -------------
 
 #### (1) Twitter dataset
-Our experiment employed two types of dataset.
-First one is the twitter emoji dataset which we get using REST API. For considering the imbalance in the actual usage of emoji on social media, we only considered the top 64 emojis. These are the top 64 emojis which we get from [emojitracker](http://www.emojitracker.com/).
+Our experiment needs two dataset for employing different task.
+
+First one is the twitter emoji dataset which we get using REST API. For considering the imbalance in the actual usage of emoji on social media, we only considered the top 64 emojis. 
+```
+✅✨🌚🎉🎶👀👇👌👍👏👑💀💔💕💖💗💙💚💛💜💞💪💯🔥😀😁😂😃😄😅😆😇😈😉😊😋😌😍😎😏😐😑😒😔😕😘😜😝😞😡😢😣😤😩😪😫😬😭😱😳😴🙈🙌🙏
+``` 
+These are the top 64 emojis which we get from [emojitracker](http://www.emojitracker.com/).
 
 
 Twitter dataset can be found in ``./data/Twitter.csv``. Each row represents a twitter post including at least one emoji of the top 64 emojis. 
@@ -41,7 +46,7 @@ python ./data/preprocessing.py --Twitter.csv
 
 #### (2) GoEmotion dataset
 For emotion detection, we employed GoEmotion which was released [here](https://github.com/google-research/google-research/tree/master/goemotions).
-GoEmotion is a dataset labeled 58,000 Reddit  comments with 28 emotions. Furthermore, all the comments were also labeled with hierarchical grouping (positive, negative, ambiguous + neutral) and Ekman emotion (anger, disgust, fear, joy, sadness, surprise + neutral). To exclude ambiguous data as much as possible, we removed all the comments labeled as neutral. 
+GoEmotion is a dataset labeled 58,000 Reddit  comments with 28 emotions. Furthermore, all the comments were also labeled with hierarchical grouping (positive, negative, ambiguous + neutral) and Ekman emotion (anger, disgust, fear, joy, sadness, surprise + neutral). To exclude ambiguous data as much as possible, we removed all the comments labeled as neutral during training stage. 
 
 Also, we used this dataset after employing preprocessing. You can do this by,
 ```
