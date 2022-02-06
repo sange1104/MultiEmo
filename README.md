@@ -86,7 +86,7 @@ Simple Demo
 -------------
 ![readme](https://user-images.githubusercontent.com/63252403/152666369-9e0cbd97-5c41-4264-8562-5a72499a1cef.JPG)
 
-You can test our model with this simple demo. You can do this by, 
+You can test our model with this simple demo as follows:
 ```
 python run_multiemo.py 
 ``` 
