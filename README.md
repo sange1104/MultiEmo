@@ -90,6 +90,9 @@ Note that the number of aux_task and aux_num should be equal.
 
 Simple Demo
 -------------
+![readme](https://user-images.githubusercontent.com/63252403/152666369-9e0cbd97-5c41-4264-8562-5a72499a1cef.JPG)
+
+You can test our model with this simple demo. You can do this by, 
 ```
 python run_multiemo.py 
 ``` 
