@@ -65,8 +65,7 @@ You can run [train.py]() setting arguments as follows:
 |learning_rate|No|float|1e-4|-|
 |batch_size|No|int|64|-|
 |num_epoch|No|int|50|-|
-|save_history|No|bool|True|-|
-|save_checkpoint|No|bool|True|-|
+|save_cp|No|bool|True|-| 
 |patience|No|int|0|-|
 |early_stop|No|int|2|-|
 |decay|No|bool|False|-|
@@ -83,7 +82,7 @@ Options of aux_task can be one of,
 
 If you want a multi-task model with more than 1 auxiliary task, you can give several tasks as follows:
 ```
-python train.py --aux_num 2 --aux_task emo sent --gpu_num 1
+python ./scripts/train.py --aux_num 2 --aux_task emo sent --gpu_num 1
 ``` 
 Note that the number of aux_task and aux_num should be equal.
 
