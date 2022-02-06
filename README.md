@@ -4,9 +4,9 @@ This repository contains the dataset and the implementation code for the paper *
 
 Overview🧐
 -------------
-* [data/]() contains raw and preprocessed datasets for train, validation and test. preprocessing.py would help preprocess the raw text. Also, pre-trained model weight and vocabulary for tokenizing will be located here. 
-* [scripts/]() contains code for implementing the model and thus reproducing results in the paper.
-* [checkpoints/]() is a repository where a checkpoint of the trained model such as weight information or optimizer state would be saved.
+* [data/](https://github.com/sange1104/MultiEmo/tree/main/data) contains raw and preprocessed datasets for train, validation and test. preprocessing.py would help preprocess the raw text. Also, pre-trained model weight and vocabulary for tokenizing will be located here. 
+* [scripts/](https://github.com/sange1104/MultiEmo/tree/main/scripts) contains code for implementing the model and thus reproducing results in the paper.
+* [checkpoints/](https://github.com/sange1104/MultiEmo/tree/main/checkpoints) is a repository where a checkpoint of the trained model such as weight information or optimizer state would be saved.
 * README.md
 * requirements.txt
 
@@ -23,7 +23,7 @@ pip install -r requirements.txt
 
 **Training setup**
 
-You can download the model checkpoints from the [TorchMoji repo](https://github.com/huggingface/torchMoji). We also employed tokenizer used in torchmoji, you should download this vocabulary [here](https://github.com/huggingface/torchMoji/blob/master/model/vocabulary.json). Both pre-trained weights and vocabulary file is expected to be located in [data/]().
+You can download the model checkpoints from the [TorchMoji repo](https://github.com/huggingface/torchMoji). We also employed tokenizer used in torchmoji, you should download this vocabulary [here](https://github.com/huggingface/torchMoji/blob/master/model/vocabulary.json). Both pre-trained weights and vocabulary file is expected to be located in [data/](https://github.com/sange1104/MultiEmo/tree/main/data).
 
 Data Format
 -------------
@@ -39,24 +39,19 @@ These are the top 64 emojis which we get from [emojitracker](http://www.emojitra
 
 
 Twitter dataset can be found in ``./data/Twitter.csv``. Each row represents a twitter post including at least one emoji of the top 64 emojis. 
-The data we used for training includes posts with only one emoji. You can preprocess the raw data by running the following script.
+The data we used for training includes posts with only one emoji. You can preprocess the raw data by running the following script. After running the ``./data/preprocessing.py``, preprocessed dataset will split into 3 files for train, validation, and test, respectively.
 ```
-python ./data/preprocessing.py --Twitter.csv
+python ./data/preprocessing.py --data_path Twitter.csv
 ``` 
 
 #### (2) GoEmotion dataset
 For emotion detection, we employed GoEmotion which was released [here](https://github.com/google-research/google-research/tree/master/goemotions).
-GoEmotion is a dataset labeled 58,000 Reddit  comments with 28 emotions. Furthermore, all the comments were also labeled with hierarchical grouping (positive, negative, ambiguous + neutral) and Ekman emotion (anger, disgust, fear, joy, sadness, surprise + neutral). To exclude ambiguous data as much as possible, we removed all the comments labeled as neutral during training stage. 
-
-Also, we used this dataset after employing preprocessing. You can do this by,
-```
-python ./data/preprocessing.py --GoEmotion.csv
-```
+GoEmotion is a dataset labeled 58,000 Reddit  comments with 28 emotions. Furthermore, all the comments were also labeled with hierarchical grouping (positive, negative, ambiguous + neutral) and Ekman emotion (anger, disgust, fear, joy, sadness, surprise + neutral). To exclude ambiguous data as much as possible, we removed all the comments labeled as neutral during training stage. Since GoEmotion dataset is published in train, validation and test set, respectively, we only employed the same preprocessing pipeline we used for Twitter dataset.
 
 
 How to train
 -------------
-You can run [train.py]() setting arguments as follows:
+You can run [train.py](https://github.com/sange1104/MultiEmo/blob/main/scripts/train.py) setting arguments as follows:
 |Name|Required|Type|Default|Options|
 |---|---|---|---|---|
 |**aux_num**|Yes|int|-|1,2,3|
