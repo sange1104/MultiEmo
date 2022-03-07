@@ -1,6 +1,6 @@
 # MultiEmo 
 
-This repository contains the dataset and the implementation code for the paper **MultiEmo: multi-task framework for emoji prediction**.
+This repository contains the dataset and the implementation code for the paper **[MultiEmo: multi-task framework for emoji prediction](https://www.sciencedirect.com/science/article/pii/S0950705122001794/pdfft?casa_token=iEcS-ez4LW0AAAAA:21x08w4i_mnNo8iaqW8cR1eukq54ycVhl_Jx0nBfkI3u15ME0l4hiD5m3FS70J9_b2X-bDTmAE8&md5=4b7d14e958d7894507514f1a71c759da&pid=1-s2.0-S0950705122001794-main.pdf)**.
 
 Overview🧐
 -------------
@@ -91,6 +91,18 @@ You can test our model with this simple demo as follows:
 python run_multiemo.py 
 ``` 
 
-
+Citation
+-------------
+If you find our framework useful in your research, please cite our paper:
+```
+@article{lee2022multiemo,
+  title={MultiEmo: Multi-task framework for emoji prediction},
+  author={Lee, SangEun and Jeong, Dahye and Park, Eunil},
+  journal={Knowledge-Based Systems},
+  pages={108437},
+  year={2022},
+  publisher={Elsevier}
+}
+```
 
 
